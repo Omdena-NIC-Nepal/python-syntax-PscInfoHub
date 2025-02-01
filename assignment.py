@@ -1,49 +1,28 @@
 def format_string(name, age):
     return f"My name is {name} and I am {age} years old"
-    
 
 def conditional_check(number):
-    if number>10:
+    if number > 10:
         return "Greater"
-    elif number<10:
+    elif number < 10:
         return "Lesser"
     else:
         return "Equal"
 
 def loop_sum(n):
-    sum=0
-    for i in range(1,n+1):
-        sum=i+sum
-    return sum
-    
-    
+    total = 0
+    for i in range(1, n+1):
+        total += i
+    return total
 
 def list_operations(numbers):
-    sum=0
-    for i in numbers:
-        sum=i+sum 
-    return {
-        "sum=": sum,
-        "min=": min(numbers),
-        "Max=": max(numbers)
-    }
-    
-    
-
+    return sum(numbers), max(numbers), min(numbers)
 
 def dict_operations(students_dict):
-    students=[]
-    for key,value in students_dict:
-        if value>80:
-            students.append(key)
-    return students 
-   
-   
-     
-   
-def set_operations(list1, list2):
-    return "Set:" list1&list2
+    return [name for name, score in students_dict.items() if score > 80]
 
+def set_operations(list1, list2):
+    return set(list1).intersection(set(list2))
 
 def arithmetic_ops(a, b):
     return {
